@@ -13,4 +13,6 @@ val GreyBox = Color(0xFF202329)
 val Orange_color = Color(0xB5FFEB3B)
 val BorderYellow = Color(0x80FED32C)
 val Grey = Color(0xFF888888)
+val LineGrey = Color(0xFF2F3238)
+val text_Blue = Color(0xFF17202B)
 
