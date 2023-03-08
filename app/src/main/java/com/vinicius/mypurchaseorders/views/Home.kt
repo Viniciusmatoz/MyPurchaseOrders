@@ -4,10 +4,7 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.AppBarDefaults
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -29,39 +26,46 @@ fun Home(){
             TopAppBar(
                 modifier = androidx.compose.ui.Modifier.padding(top = 10.dp),
                 backgroundColor = DarkBlackground,
-                elevation = 0.dp
+                elevation = 0.dp,
             ) {
                 Row(
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Image(
-                        imageVector = ImageVector.vectorResource(id = R.drawable.ic_user_acount_top_app_bar),
-                        contentDescription = "Icon user account",
-                        modifier = androidx.compose.ui.Modifier.size(40.dp),
-                    )
-                    Text(
-                        text = "Hi User", color = YellowDefault,
-                        modifier = androidx.compose.ui.Modifier.padding(start = 10.dp),
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold
-                        )
-                }
-                Row(
                     modifier = androidx.compose.ui.Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Image(
                         imageVector = ImageVector.vectorResource(id = R.drawable.ic_baseline_menu),
-                        contentDescription = "Icon Baseline Menu",
-                        modifier = androidx.compose.ui.Modifier
-                            .size(45.dp)
-                            .padding(end = 10.dp)
+                        contentDescription = "Icon baseline menu",
+                        modifier = androidx.compose.ui.Modifier.size(40.dp),
                     )
-                }
+                    Text(
+                        text = "Purchase Orders", color = YellowDefault,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                        )
+                    Image(
+                        imageVector = ImageVector.vectorResource(id = R.drawable.ic_settings),
+                        contentDescription = "Icon Settings",
+                        modifier = androidx.compose.ui.Modifier
+                            .size(40.dp)
+                            .padding(end = 2.dp)
+                    )
+                } }
+            }
+    ) {
+        Column(
+            modifier = androidx.compose.ui.Modifier
+                .padding(top = 15.dp, start = 15.dp, end = 15.dp)
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Card(
+                modifier = androidx.compose.ui.Modifier.size(width = 500.dp, height = 250.dp),
+                backgroundColor = YellowDefault,
+            ) {
             }
         }
-    ) {
-
     }
 }
 
